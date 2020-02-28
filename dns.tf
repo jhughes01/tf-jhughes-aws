@@ -2,6 +2,10 @@ resource "aws_route53_zone" "jhcloud" {
   name = "jhcloud.io"
 }
 
+resource "aws_route53_zone" "zentech" {
+  name = "zentech.xyz"
+}
+
 resource "aws_route53_record" "mx" {
   zone_id = aws_route53_zone.jhcloud.zone_id
   name    = "jhcloud.io"
